@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysvc 
+  labels:
+    app: "mysvc"
+spec:
+  containers:
+  - name: "mysvc"
+    image: avidoc16/mysvc:v1 
