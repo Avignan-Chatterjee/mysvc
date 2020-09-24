@@ -1,1 +1,1 @@
-# mysvcsudo docker build -t mysvc:v1 .
+docker build -t mysvc:v1 .

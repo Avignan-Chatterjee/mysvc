@@ -1,7 +1,6 @@
 package entity_controller
 
 import (
-	//"net/http"
 	"fmt"
 	"strconv"
 
@@ -26,8 +25,6 @@ func NewEntityController(svc entity.Service) EntityController {
 }
 
 func (e *entityController) GetByID(c *gin.Context) {
-	// Call the e.service.GetByID
-	//c.JSON(http.StausNotImplemented, "Implement me!")
 	idStr := c.Param("entity_id")
 	id, errC := strconv.ParseInt(idStr, 10, 64)
 	if errC != nil {
@@ -43,8 +40,6 @@ func (e *entityController) GetByID(c *gin.Context) {
 }
 
 func (e *entityController) CreateEntity(c *gin.Context) {
-	// Call the e.service.GetByID
-	//c.JSON(http.StausNotImplemented, "Implement me!")
 	var ent entity.Entity
 	err := c.BindJSON(&ent)
 	if err != nil {

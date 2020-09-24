@@ -21,11 +21,9 @@ type service struct {
 }
 
 func (s *service) GetByID(id int64) (*Entity, error) {
-	// should be calling db.GetByID()
 	return s.db.GetByID(id)
 }
 
 func (s *service) CreateEntity(e Entity) error {
-	// should be calling db.GetByID()
 	return s.db.CreateEntity(e)
 }

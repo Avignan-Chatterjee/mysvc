@@ -22,7 +22,6 @@ func NewMemStoreRepository() MemStoreRepository {
 }
 
 func (s *memStore) GetByID(id int64) (*entity.Entity, error) {
-	// check s.store
 	if e, ok := s.store[id]; ok {
 		return e, nil
 	}
